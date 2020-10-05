@@ -12,16 +12,19 @@
     "test": "jest"
   },
   "dependencies": {
-    "@nuxt/content": "^1.8.1",
     "@nuxtjs/axios": "^5.12.2",
     "bootstrap": "^4.5.2",
     "bootstrap-vue": "^2.16.0",
     "core-js": "^3.6.5",
-    "nuxt": "^2.14.5"
+    "lodash.clonedeep": "^4.5.0",
+    "nuxt": "^2.14.5",
+    "vue2-google-maps": "^0.10.7"
   },
   "devDependencies": {
+    "@nuxtjs/dotenv": "^1.4.1",
     "@nuxtjs/eslint-config": "^3.1.0",
     "@nuxtjs/eslint-module": "^2.0.0",
+    "@nuxtjs/proxy": "^2.0.1",
     "@vue/test-utils": "^1.1.0",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "^10.1.0",
