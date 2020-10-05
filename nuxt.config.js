@@ -18,6 +18,7 @@ export default {
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
+    '@/plugins/vue-google-map.js'
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
@@ -26,7 +27,8 @@ export default {
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [
     // https://go.nuxtjs.dev/eslint
-    '@nuxtjs/eslint-module'
+    '@nuxtjs/eslint-module',
+    '@nuxtjs/dotenv'
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
@@ -35,17 +37,17 @@ export default {
     'bootstrap-vue/nuxt',
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
-    // https://go.nuxtjs.dev/content
-    '@nuxt/content'
+    '@nuxtjs/proxy'
   ],
+  proxy: { // for develop
+    '/api/': 'http://127.0.0.1:8000/'
+  },
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {},
 
-  // Content module configuration (https://go.nuxtjs.dev/content-config)
-  content: {},
-
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
+    transpile: [/^vue2-google-maps($|\/)/]
   }
 }
